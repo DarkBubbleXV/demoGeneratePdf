@@ -50,7 +50,7 @@ public class DemoController {
         Resource resource = resourceLoader.getResource("classpath:templates/report1.jrxml");
         String filePath = resource.getFile().getAbsolutePath();
         Map<String, Object> parameters = new HashMap<>();
-        parameters.put("tanggal", "today");
+        parameters.put("tanggal", today);
         parameters.put("latarWaktu", demoRequest.getLatarWaktu());
         JasperReport report = JasperCompileManager.compileReport(filePath);
         JasperPrint print = JasperFillManager.fillReport(report,parameters,new JREmptyDataSource());
