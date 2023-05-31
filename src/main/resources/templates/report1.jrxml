@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f364eed8-6621-44b2-95e8-78220e5cdf41">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tanggal" class="java.lang.String"/>
+	<parameter name="latarWaktu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="41" height="20" uuid="d2d17ddd-e798-4fbc-a9bf-f30c10abc0d5"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="41" height="20" uuid="2d40fce3-17f9-46da-9583-992a231c60c4"/>
+				<text><![CDATA[Selamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="20" width="100" height="20" uuid="89ee739f-6257-4460-b194-bb1d4726633e"/>
+				<text><![CDATA[pelanggan!]]></text>
+			</staticText>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="41" y="20" width="49" height="20" uuid="036710d4-f7d8-46a9-bbd7-db6dcf2f5da8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{latarWaktu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="0" width="100" height="20" uuid="4e188507-8d35-44b7-b926-a676c0c36ba8"/>
+				<textFieldExpression><![CDATA[$P{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
